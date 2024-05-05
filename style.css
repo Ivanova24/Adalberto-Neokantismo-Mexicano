@@ -3,6 +3,9 @@
 :root{
   --font: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
   --font-color: #222;
+  --block-flow-sm: min(2rem,  4vh);
+  --block-flow-md: min(4rem,  8vh);
+  --block-flow-lg: min(8rem, 16vh);
 }
 
 
@@ -32,6 +35,16 @@ html {
   text-size-adjust: none;
   font-family: var(--font);
   color: var(--font-color);
+}
+
+/*
+  Typographic tweaks!
+    Add accessible line-height
+    Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Reapply the pointer cursor for anchor tags */
@@ -124,11 +137,16 @@ meter {
 
 
 /* *****Utilities***** */
-
-.wrapper{
-  padding-left: 2rem;
-  padding-right: 2rem;
+.block-flow {
+  margin-block-end: min(4rem, 8vh);
 }
+
+:is(.block-flow) > * + * {
+  margin-block-start:
+    var(--block-flow, var(--block-flow-md) );
+}
+
+
 
 /* *****Site Styles***** */
 
