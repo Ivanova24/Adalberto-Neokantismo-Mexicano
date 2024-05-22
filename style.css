@@ -1,16 +1,73 @@
 /* *****Custom Properties*****  */
-
 :root{
-  --font: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-  --font-color: #222;
-  --block-flow-sm: min(2rem,  4vh);
-  --block-flow-md: min(4rem,  8vh);
-  --block-flow-lg: min(8rem, 16vh);
+  --color-title:#1d1b65;
+  --color-text: #425466;
+  --color-bg-img: #45ccde;
+  --size-fluid-1: clamp(1rem, 2vw, 1.25rem);
+  --size-fluid-2: clamp(2rem, 5vw, 6rem);
+  --size-fluid-3: clamp(4.25rem, 11vw, 9.25rem);
+  --font-title: 'Yantramanav'; 
+  --font-subTitle: 'Sintony';
+  --font-text: 'Poppins', 'Bahnschrift', 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow','sans-serif-condensed', sans-serif;
+  --font-size: 1.12rem;
+  --font-size-title: clamp(2rem, 5vw, 3.5rem); 
+  --font-size-subtitle: clamp(1.2rem, 3vw, 2rem);
+  --wrapper: max(1.5rem, 15.3vw - 14rem / 2);
+  --spacing-small: 1rem;
+  --spacing-medium: 2rem; 
+  --spacing-big: 4rem; 
 }
 
+/* *****Fonts*****  */
+@font-face {
+  font-display: swap; 
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/Fonts/yantramanav-700.woff2') format('woff2'); 
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/Fonts/yantramanav-900.woff2') format('woff2'); 
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Sintony';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/Fonts/sintony-400.woff2') format('woff2'); 
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Sintony';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/Fonts/sintony-700.woff2') format('woff2'); 
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/Fonts/poppins-regular.woff2') format('woff2'); 
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/assets/Fonts/poppins-500.woff2') format('woff2'); 
+}
 
 /* *****Reset*****  */
-
 /*
     Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
     - The "symbol *" part is to solve Firefox SVG sprite bug
@@ -33,8 +90,9 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-  font-family: var(--font);
-  color: var(--font-color);
+  font-family: var(--font-text);
+  color: var(--color-text);
+  font-size: var(--font-size);
 }
 
 /*
@@ -44,7 +102,9 @@ html {
 */
 body {
   line-height: 1.5;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
 }
 
 /* Reapply the pointer cursor for anchor tags */
@@ -128,23 +188,75 @@ meter {
   display: none;
 }
 
-
-
 /* *****Components***** */
 
 /***Hero Section*** */
+.hero{
+  display: grid;
 
+  .hero-description{
+    display: grid;
+    row-gap: var(--spacing-medium);
+    padding: var(--spacing-medium); 
 
+    .hero-text{
+      display: grid;
+      row-gap: var(--spacing-small);
+    }
+  }
+
+  .hero-img{
+    background-color: var(--color-bg-img);
+    padding: var(--spacing-medium);
+
+    img {
+      border-radius: 3rem;
+    }
+  }
+}
+
+@media screen and (min-width: 27rem) {
+  .hero {
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+
+      .hero-description{
+        row-gap: 0;
+        padding: 2rem 1rem 2rem var(--size-fluid-2);
+      }
+
+      .hero-img {
+        display: grid;
+        justify-content: center;
+        padding-top: var(--size-fluid-3);
+        
+        img {
+          border-radius: 0;
+        }
+      }
+  }
+}
 
 /* *****Utilities***** */
-.block-flow {
-  margin-block-end: min(4rem, 8vh);
+.wrapper {
+  padding: 0 var(--wrapper) 0;
 }
 
-:is(.block-flow) > * + * {
-  margin-block-start:
-    var(--block-flow, var(--block-flow-md) );
+.title{
+  font-weight: 900;
+  color: var(--color-title);
+  font-family: var(--font-title);
+  font-size: var(--font-size-title);
 }
+
+.subTitle{
+  font-family: var(--font-subTitle);
+  font-size: var(--font-size-subtitle);
+  font-weight: 700;
+}
+
+
+
 
 
 
