@@ -14,6 +14,7 @@
   --font-subTitle: 'Sintony';
   --font-text: 'Poppins', 'Bahnschrift', 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow','sans-serif-condensed', sans-serif;
   --font-size: 1.12rem;
+  --font-size-small: 0.865rem;
   --font-size-img: clamp(1.2rem, 2vw, 1.5rem);
   --font-size-title: clamp(2rem, 5vw, 3.5rem); 
   --font-size-subtitle: clamp(1.2rem, 3vw, 2rem);
@@ -85,7 +86,7 @@
     - The "symbol *" part is to solve Firefox SVG sprite bug
     - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
  */
- *:where(:not(html, iframe, canvas, img, svg, video, audio, blockquote):not(svg *, symbol *)) {
+ *:where(:not(html, iframe, canvas, img, svg, video, audio, cite):not(svg *, symbol *)) {
   all: unset;
   display: revert;
 }
@@ -515,7 +516,13 @@ meter {
 
   .cite{
     color: var(--color-terciary);
+    margin-left: 2.8rem;
     font-size: 1.2rem;
+  }
+
+  hr{
+    margin: 2rem 0;
+    border-top: 1px solid var(--color-secondary);
   }
 }
 
@@ -524,6 +531,56 @@ meter {
     margin: 0;
   }
 } 
+
+.quote{
+  p{
+    margin: 2rem 0 1rem 0;
+  }
+  cite{
+    font-size: var(--font-size-small);
+  }
+}
+
+.card-docu{
+  display: flex;
+  flex-wrap: wrap;
+  border: thin solid var(--color-primary);
+  padding: var(--spacing-small);
+  gap: 1rem;
+
+  img{
+    flex: 0 1 12.5rem;
+  }
+
+  figcaption{
+    flex: 2 1 25rem;
+  }
+}
+
+.docu-text{
+  p{
+    margin: 0;
+    font-size: var(--font-size-small);
+  }
+
+  h3{
+  font-weight: bold;
+  color: var(--color-terciary);
+  }
+}
+
+:is(figcaption) > p{
+  font-size: var(--font-size-small);
+  margin: var(--spacing-small) 0 !important;
+}
+
+.footer-page{
+  margin-top: 6rem;
+  padding: 2rem 0;
+  font-size: var(--font-size-small);
+  border-top: thin solid #d3d3d3;
+}
+
 
 /*****image frame*****/
 @property --s {
@@ -563,15 +620,30 @@ meter {
   border-block: .5em solid #0000;
   padding-inline: .5em calc(var(--r) + .25em);
   clip-path: polygon(100% 0,0 0,0 100%,100% 100%,100% calc(100% - .25em),calc(100% - var(--r)) 50%,100% .25em);
-  background:
-   radial-gradient(.2em 50% at left,#000a,#0000) border-box,
-   #45ccde24 padding-box; 
+  background:radial-gradient(.2em 50% at left,#000a,#0000) border-box,#45ccde24 padding-box; 
+  font-size: var(--font-size-small);
   width: fit-content;
   margin-top: 1rem;
 }
 
 
 /* *****Utilities***** */
+.grid-1{
+  --min: 15ch;
+  --gap: 2rem;
+  display: grid;
+  grid-gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+
+  figcaption{
+    font-size: var(--font-size-small);
+  }
+}
+
+.grid-2{
+  display: grid;
+  row-gap: var(--spacing-big);
+}
 
 .box-shadow-1 {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
@@ -587,6 +659,26 @@ meter {
 
 .none {
   display: none;
+}
+
+.spacing-text-small{
+  margin: var(--spacing-small) 0;
+}
+
+.spacing-text-medium{
+  margin: var(--spacing-medium) 0;
+}
+
+.spacing-top-small{
+  padding-top: var(--spacing-small);
+}
+
+.spacing-top-medium{
+  padding-top: var(--spacing-medium);
+}
+
+.spacing-top-big{
+  padding-top: var(--spacing-big);
 }
 
 .title{
@@ -609,7 +701,17 @@ meter {
 }
 
 .full-line{
-  border-image: conic-gradient(var(--color-primary) 0 0) fill 0/calc(100% - 8px) 0 0 0/0 100vw 0 0;
+  --b:8px;
+  border-image: conic-gradient(var(--color-primary) 0 0) fill 0/calc(100% - var(--b)) 0 0 0/0 100vw 0 0;
+}
+
+h2.full-line{
+  --b: 6px;
+}
+
+.left {
+  border-image-outset: 0 0 0 100vw;
+  width: fit-content;
 }
 
 .wrapper {
@@ -618,11 +720,6 @@ meter {
   padding-inline: var(--spacing-small);
 }
 
-.footer-page{
-  margin-top: 6rem;
-  padding: 2rem 0;
-  border-top: 1px solid #d3d3d3;
-}
 
 
 
