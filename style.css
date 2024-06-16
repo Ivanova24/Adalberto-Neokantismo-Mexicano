@@ -18,7 +18,7 @@
   --font-size-img: clamp(1.2rem, 2vw, 1.5rem);
   --font-size-title: clamp(2rem, 5vw, 3.5rem); 
   --font-size-subtitle: clamp(1.2rem, 3vw, 2rem);
-  --max-width: 68.2ch;
+  --max-width: 72ch;
   --spacing-small: 1rem;
   --spacing-medium: 2rem; 
   --spacing-big: 4rem;
@@ -554,6 +554,8 @@ meter {
 
   figcaption{
     flex: 2 1 25rem;
+    display: grid;
+    grid-template-rows: max-content 16rem 1fr;
   }
 }
 
