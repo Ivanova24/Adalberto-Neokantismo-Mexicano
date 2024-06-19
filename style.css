@@ -332,8 +332,6 @@ meter {
 
 /***secondary navigation***/
 .cards{
-  display: grid;
-  place-content: center;
   gap: var(--spacing-large);
   margin-top: var(--size-fluid-3);
 
@@ -352,7 +350,7 @@ meter {
 }
 
 @media screen and (min-width: 36rem) {
-  .cards{
+  .grid-3{
   grid-template-columns: auto auto;
   }
 }
@@ -526,7 +524,7 @@ meter {
   }
 }
 
-@media (width <= 32rem){
+@media screen and (width <= 32rem){
   .cite{
     margin: 0;
   }
@@ -554,6 +552,11 @@ meter {
 
   figcaption{
     flex: 2 1 25rem;
+  }
+}
+
+@media screen and (width >= 30rem){
+  :is(.card-docu) figcaption{
     display: grid;
     grid-template-rows: max-content 16rem 1fr;
   }
@@ -628,7 +631,19 @@ meter {
   margin-top: 1rem;
 }
 
+.link{
+  font-size: var(--font-size-small);
+  border: thin dotted var(--color-primary);
+  margin: 0 !important;
+  outline: transparent;
+  width: fit-content;
+  padding: 0.3rem;
 
+  &:hover{
+    color: var(--color-terciary);
+    border: thin solid var(--color-terciary);
+  }
+}
 /* *****Utilities***** */
 .grid-1{
   --min: 15ch;
@@ -644,6 +659,16 @@ meter {
 
 .grid-2{
   display: grid;
+  row-gap: var(--spacing-big);
+}
+
+.grid-3{
+  display: grid;
+  place-content: center;
+}
+
+.grid-3-gap{
+  column-gap: var(--spacing-medium);
   row-gap: var(--spacing-big);
 }
 
@@ -681,6 +706,10 @@ meter {
 
 .spacing-top-big{
   padding-top: var(--spacing-big);
+}
+
+.spacing-top-large{
+  padding-top: var(--spacing-large);
 }
 
 .title{
