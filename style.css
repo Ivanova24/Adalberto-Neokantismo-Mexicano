@@ -5,7 +5,7 @@
   --color-primary: #45ccde;
   --color-secondary: #ccf9ff;
   --color-terciary: #3b60bf;
-  --color-white: rgb(240, 242, 244);
+  --color-white: #f0f2f4;
   --color-shadow: rgba(0, 0, 0, 0.2);
   --size-fluid-1: clamp(2rem, 4vw, 3.5rem);
   --size-fluid-2: clamp(2rem, 5vw, 6rem);
@@ -634,22 +634,60 @@ meter {
 .link{
   font-size: var(--font-size-small);
   border: thin dotted var(--color-primary);
-  margin: 0 !important;
-  outline: transparent;
+  transition-duration: 0.5s;
+  margin-top: 0;
+  margin-bottom: 0;
   width: fit-content;
   padding: 0.3rem;
 
-  &:hover{
+  &:hover,
+  &:focus{
     color: var(--color-terciary);
     border: thin solid var(--color-terciary);
   }
 }
+
+/*****Popover*****/
+[popover] { 
+  padding: 1rem;
+  max-width: 55ch;
+  border-radius: 1rem;
+  background-image: linear-gradient(
+  45deg,
+  hsl(187deg 100% 90%) 0%,
+  hsl(187deg 100% 92%) 26%,
+  hsl(187deg 100% 93%) 39%,
+  hsl(187deg 100% 95%) 50%,
+  hsl(187deg 100% 97%) 61%,
+  hsl(187deg 100% 98%) 74%,
+  hsl(0deg 0% 100%) 100%
+);
+}
+
+[popover] h2{
+  font-weight: bold;
+  color: var(--color-terciary);
+  font-family: var(--font-subTitle);
+}
+
+[popover] p{
+  margin: var(--spacing-small) 0;
+  font-size: var(--font-size-small);
+}
+
+.container-img{
+  button{
+    margin-left: 2rem;
+  }
+}
+
+
 /* *****Utilities***** */
 .grid-1{
   --min: 15ch;
-  --gap: 2rem;
   display: grid;
-  grid-gap: var(--gap);
+  column-gap: var(--spacing-medium);
+  row-gap: var(--spacing-big);
   grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 
   figcaption{
