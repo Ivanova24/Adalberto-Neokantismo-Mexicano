@@ -635,6 +635,7 @@ meter {
   font-size: var(--font-size-small);
   border: thin dotted var(--color-primary);
   transition-duration: 0.5s;
+  cursor: pointer;
   margin-top: 0;
   margin-bottom: 0;
   width: fit-content;
@@ -650,29 +651,25 @@ meter {
 /*****Popover*****/
 [popover] { 
   padding: 1rem;
-  max-width: 55ch;
+  max-width: 70ch;
   border-radius: 1rem;
-  background-image: linear-gradient(
-  45deg,
-  hsl(187deg 100% 90%) 0%,
-  hsl(187deg 100% 92%) 26%,
-  hsl(187deg 100% 93%) 39%,
-  hsl(187deg 100% 95%) 50%,
-  hsl(187deg 100% 97%) 61%,
-  hsl(187deg 100% 98%) 74%,
-  hsl(0deg 0% 100%) 100%
-);
+  background-image: linear-gradient( 45deg, hsl(210deg 43% 95%) 0%, hsl(207deg 44% 95%) 21%, hsl(210deg 45% 96%) 30%, hsl(210deg 44% 96%) 39%, hsl(214deg 47% 97%) 46%, hsl(204deg 38% 97%) 54%, hsl(210deg 40% 98%) 61%, hsl(210deg 33% 99%) 69%, hsl(240deg 33% 99%) 79%, hsl(0deg 0% 100%) 100% );
 }
 
 [popover] h2{
   font-weight: bold;
   color: var(--color-terciary);
   font-family: var(--font-subTitle);
+  font-size: var(--font-size-small);
 }
 
 [popover] p{
   margin: var(--spacing-small) 0;
   font-size: var(--font-size-small);
+}
+
+[popover] a:hover {
+  color: var(--color-terciary);
 }
 
 .container-img{
