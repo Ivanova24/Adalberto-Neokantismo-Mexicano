@@ -314,10 +314,10 @@ meter {
 }
 
 .gallery figcaption {
-  transition: transform 800ms 400ms ease-in;
+  /*transition: transform 800ms 400ms ease-in;*/
   padding: 0.25em 0.5em;
-  border-radius: 4px 0 0 0;
-  background-color: hsl(0 0% 100% / 87%);
+  border-radius: 15px 0 0 0;
+  background-color: hsl(0 0% 100% / 80%);
   z-index: 1;
 }
 
@@ -336,11 +336,11 @@ meter {
   outline-offset: 2px;
 }
 
-@media (any-hover: hover) and (any-pointer: fine) {
+/*@media (any-hover: hover) and (any-pointer: fine) {
   .gallery figcaption {
     transform: translateY(100%);
   }
-}
+}*/
 
 /***secondary navigation***/
 .cards {
