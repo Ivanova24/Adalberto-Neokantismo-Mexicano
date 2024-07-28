@@ -15,28 +15,43 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header class="header-page">
-        <a href="index.html" aria-label="Inicio del sitio web">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="35"
-            height="35"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#1d1b65"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-home"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
-            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-            <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-          </svg>
-        </a>
+    <header class="site-header">
+    <div class="site-header__top">
+      <div class="wrapper-header site-header__wrapper flex-top">
+        <div class="site-header__middle">
+          <a href="index.html" aria-label="Inicio del sitio web">
+            <svg xmlns="http://www.w3.org/2000/svg"  width="35"  height="35"  viewBox="0 0 24 24"  fill="none"  stroke="#1d1b65"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-home"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/>
+            </svg>
+          </a>
+        </div>
+        <div class="site-header__end">
+          <a href="#" class="button">Some action</a>
+        </div>
+      </div>
+    </div>
+    <div class="site-header__bottom">
+      <div class="wrapper-header site-header__wrapper flex-bottom">
+        <div class="site-header__middle">
+          <nav class="nav">
+            <button class="nav__toggle link" aria-expanded="false" type="button">
+              MENÚ
+            </button>
+            <ul class="nav__wrapper text-center">
+              <li class="nav__item"><a href="/biografia.html">Biografía</a></li>
+              <li class="nav__item"><a href="/Neokantismo.html">Neokantismo</a></li>
+              <li class="nav__item"><a href="/PremioInternacional.html">Premio</a></li>
+              <li class="nav__item"><a href="/ConservatorioMusica.html">Conservatorio</a></li>
+              <li class="nav__item"><a href="/Libros.html">Libros</a></li>
+              <li class="nav__item"><a href="/ManuscritosIneditos.html">Manuscritos</a></li>
+              <li class="nav__item"><a href="/Presentaciones.html">Presentaciones</a></li>
+              <li class="nav__item"><a href="/GaleriaProfesional.html">Galería</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
     </header>
-    <main class="main-page wrapper">
+    <main class="main-page wrapper spacing-top-large">
         <h1 class="title full-line">MANUSCRITOS INÉDITOS</h1>
         <h2 class="subTitle full-line left spacing-top-large">MÚSICA</h2>
         <div class="timeline-container">
@@ -162,5 +177,7 @@
         </p>
       </div>
     </footer>
+
+    <script src="/headerPages.js"></script>
 </body>
 </html>
