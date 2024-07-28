@@ -2,7 +2,7 @@
 :root {
   --color-title: #1d1b65;
   --color-text: #425466;
-  --color-primary: #45ccde;
+  --color-primary: #0084ff52;
   --color-secondary: #ccf9ff;
   --color-terciary: #3b60bf;
   --color-white: #f0f2f4;
@@ -445,7 +445,7 @@ meter {
     transition: box-shadow 1s ease-out;
 
     &:hover {
-      background-color: var(--color-secondary);
+      background-color: var(--color-primary);
       box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
         rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
         rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
