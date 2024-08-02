@@ -18,9 +18,10 @@
     sans-serif;
   --font-size: 1.12rem;
   --font-size-small: 0.865rem;
-  --font-size-img: clamp(1.2rem, 2vw, 1.5rem);
-  --font-size-title: clamp(2rem, 5vw, 3.5rem);
-  --font-size-subtitle: clamp(1.2rem, 3vw, 2rem);
+  --font-size-img: clamp(1rem, 0.939rem +0.31, 1.2rem);
+  --font-size-title: clamp(2.3rem, 1.872rem + 2.14vw, 3.7rem);
+  --font-size-subtitle: clamp(1.4rem, 1.216rem + 0.92vw, 2rem);
+  --font-size-caption: clamp(0.4rem, 0.255rem + 0.73vw, 0.8rem);
   --max-width: 72ch;
   --spacing-small: 1rem;
   --spacing-medium: 2rem;
@@ -660,18 +661,6 @@ meter {
   flex-wrap: wrap;
   row-gap: var(--spacing-medium);
   justify-content: space-between;
-
-  a {
-    text-decoration-line: underline;
-    text-decoration-color: var(--color-primary);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 5px;
-    text-decoration-skip-ink: none;
-
-    &:hover {
-      text-decoration-style: wavy;
-    }
-  }
 }
 
 /*****general pages******/
@@ -841,18 +830,18 @@ meter {
   border-radius: 1rem;
   position: absolute;
   background-image: linear-gradient(
-  45deg,
-  hsl(215deg 100% 86%) 0%,
-  hsl(215deg 100% 88%) 21%,
-  hsl(216deg 100% 89%) 30%,
-  hsl(216deg 100% 91%) 39%,
-  hsl(216deg 100% 92%) 46%,
-  hsl(217deg 100% 94%) 54%,
-  hsl(217deg 100% 95%) 61%,
-  hsl(217deg 100% 97%) 69%,
-  hsl(217deg 100% 99%) 79%,
-  hsl(0deg 0% 100%) 100%
-);
+    45deg,
+    hsl(215deg 100% 86%) 0%,
+    hsl(215deg 100% 88%) 21%,
+    hsl(216deg 100% 89%) 30%,
+    hsl(216deg 100% 91%) 39%,
+    hsl(216deg 100% 92%) 46%,
+    hsl(217deg 100% 94%) 54%,
+    hsl(217deg 100% 95%) 61%,
+    hsl(217deg 100% 97%) 69%,
+    hsl(217deg 100% 99%) 79%,
+    hsl(0deg 0% 100%) 100%
+  );
 }
 
 [popover] h2 {
@@ -1178,7 +1167,7 @@ meter {
   left: 50%;
   width: 0.1563rem;
   height: 100%;
-  background: var(--color-secondary);
+  background: var(--color-terciary);
 }
 
 .timeline-block {
@@ -1248,7 +1237,7 @@ meter {
 .slider-figure .caption {
   position: absolute;
   bottom: 0;
-  font-size: 0.8rem;
+  font-size: var(--font-size-caption);
   color: #fff;
   padding: 10px 20px;
   background-color: rgba(0, 0, 0, 0.8);
@@ -1327,6 +1316,19 @@ meter {
 
 .text-center {
   text-align: center;
+}
+
+.underline {
+  text-decoration-line: underline;
+  text-decoration-color: var(--color-primary);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+  text-decoration-skip-ink: none;
+
+  &:hover {
+    text-decoration-style: wavy;
+    text-decoration-color: var(--color-terciary);
+  }
 }
 
 .none {

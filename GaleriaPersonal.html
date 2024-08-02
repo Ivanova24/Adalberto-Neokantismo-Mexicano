@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Galería Personal</title>
     <meta
       name="description"
@@ -13,43 +13,76 @@
 
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  </head>
+  <body>
     <header class="site-header">
-    <div class="site-header__top">
-      <div class="wrapper-header site-header__wrapper flex-top">
-        <div class="site-header__middle">
-          <a href="index.html" aria-label="Inicio del sitio web">
-            <svg xmlns="http://www.w3.org/2000/svg"  width="35"  height="35"  viewBox="0 0 24 24"  fill="none"  stroke="#1d1b65"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-home"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/>
-            </svg>
-          </a>
-        </div>
-        <div class="site-header__end">
-          <a href="#" class="button">Some action</a>
-        </div>
-      </div>
-    </div>
-    <div class="site-header__bottom">
-      <div class="wrapper-header site-header__wrapper flex-bottom">
-        <div class="site-header__middle">
-          <nav class="nav">
-            <button class="nav__toggle link" aria-expanded="false" type="button">
-              MENÚ
-            </button>
-            <ul class="nav__wrapper text-center">
-              <li class="nav__item"><a href="/biografia.html">Biografía</a></li>
-              <li class="nav__item"><a href="/Neokantismo.html">Neokantismo</a></li>
-              <li class="nav__item"><a href="/PremioInternacional.html">Premio</a></li>
-              <li class="nav__item"><a href="/ConservatorioMusica.html">Conservatorio</a></li>
-              <li class="nav__item"><a href="/Libros.html">Libros</a></li>
-              <li class="nav__item"><a href="/ManuscritosIneditos.html">Manuscritos</a></li>
-              <li class="nav__item"><a href="/Presentaciones.html">Presentaciones</a></li>
-              <li class="nav__item"><a href="/GaleriaProfesional.html">Galería</a></li>
-            </ul>
-          </nav>
+      <div class="site-header__top">
+        <div class="wrapper-header site-header__wrapper flex-top">
+          <div class="site-header__middle">
+            <a href="index.html" aria-label="Inicio del sitio web">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#1d1b65"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-home"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+              </svg>
+            </a>
+          </div>
+          <div class="site-header__end">
+            <a href="#" class="button">Some action</a>
+          </div>
         </div>
       </div>
-    </div>
+      <div class="site-header__bottom">
+        <div class="wrapper-header site-header__wrapper flex-bottom">
+          <div class="site-header__middle">
+            <nav class="nav">
+              <button
+                class="nav__toggle link"
+                aria-expanded="false"
+                type="button"
+              >
+                MENÚ
+              </button>
+              <ul class="nav__wrapper text-center">
+                <li class="nav__item">
+                  <a href="/biografia.html">Biografía</a>
+                </li>
+                <li class="nav__item">
+                  <a href="/Neokantismo.html">Neokantismo</a>
+                </li>
+                <li class="nav__item">
+                  <a href="/PremioInternacional.html">Premio</a>
+                </li>
+                <li class="nav__item">
+                  <a href="/ConservatorioMusica.html">Conservatorio</a>
+                </li>
+                <li class="nav__item"><a href="/Libros.html">Libros</a></li>
+                <li class="nav__item">
+                  <a href="/ManuscritosIneditos.html">Manuscritos</a>
+                </li>
+                <li class="nav__item">
+                  <a href="/Presentaciones.html">Presentaciones</a>
+                </li>
+                <li class="nav__item">
+                  <a href="/GaleriaProfesional.html">Galería</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
     </header>
     <main class="main-page wrapper spacing-top-large">
       <h1 class="title full-line">GALERÍA DE FOTOS</h1>
@@ -57,100 +90,106 @@
       <div class="spacing-top-big">
         <div class="container-carousel">
           <div class="carruseles" id="slider" style="width: 1600%">
-            <figure class="slider-figure" style="width: var(--w-s-pers);">
-              <img src="/assets/Galería/Personal/gal-pers-1.jpg"/>
+            <figure class="slider-figure" style="width: var(--w-s-pers)">
+              <img src="/assets/Galería/Personal/gal-pers-1.jpg" />
               <figcaption class="caption">
                 Dr. García de Mendoza a la edad de 15 años.
               </figcaption>
             </figure>
-            <figure class="slider-figure" style="width: var(--w-s-pers);">
+            <figure class="slider-figure" style="width: var(--w-s-pers)">
               <img src="/assets/Galería/Personal/gal-pers-2.jpg" />
               <figcaption class="caption">
                 Retrato de bodas de los Sres. García de Mendoza.
               </figcaption>
             </figure>
-            <figure class="slider-figure" style="width: var(--w-s-pers);">
+            <figure class="slider-figure" style="width: var(--w-s-pers)">
               <img src="/assets/Galería/Personal/gal-pers-3.jpg" />
               <figcaption class="caption">
-                Dr. García de Mendoza con su familia en la sala de su residencia.
+                Dr. García de Mendoza con su familia en la sala de su
+                residencia.
               </figcaption>
             </figure>
-            <figure class="slider-figure" style="width: var(--w-s-pers);">
-              <img src="/assets/Galería/Personal/gal-pers-4.jpg"/>
+            <figure class="slider-figure" style="width: var(--w-s-pers)">
+              <img src="/assets/Galería/Personal/gal-pers-4.jpg" />
               <figcaption class="caption">
-                Sra. García de Mendoza en la sala de su residencia con sus tres hijos, Magdala, Elsa y Adalberto.
+                Sra. García de Mendoza en la sala de su residencia <br />
+                con sus tres hijos, Magdala, Elsa y Adalberto.
               </figcaption>
             </figure>
-            <figure class="slider-figure" style="width: var(--w-s-pers);">
-              <img src="/assets/Galería/Personal/gal-pers-5.jpg"/>
+            <figure class="slider-figure" style="width: var(--w-s-pers)">
+              <img src="/assets/Galería/Personal/gal-pers-5.jpg" />
               <figcaption class="caption">
-                Dr. García de Mendoza con su hijo, en su biblioteca de su residencia.
+                Dr. García de Mendoza con su hijo, en su biblioteca de su
+                residencia.
               </figcaption>
             </figure>
-            <figure class="slider-figure" style="width: var(--w-s-pers);">
+            <figure class="slider-figure" style="width: var(--w-s-pers)">
               <img src="/assets/Galería/Personal/gal-pers-6.jpg" />
               <figcaption class="caption">
                 Sra. García de Mendoza en su residencia. 1950
               </figcaption>
             </figure>
-            <figure class="slider-figure" style="width: var(--w-s-pers);">
+            <figure class="slider-figure" style="width: var(--w-s-pers)">
               <img src="/assets/Galería/Personal/gal-pers-7.jpg" />
               <figcaption class="caption">
                 Dr. García de Mendoza con su esposa y su hija Elsa.
               </figcaption>
             </figure>
-            <figure class="slider-figure" style="width: var(--w-s-pers);">
+            <figure class="slider-figure" style="width: var(--w-s-pers)">
               <img src="/assets/Galería/Personal/gal-pers-8.jpg" />
               <figcaption class="caption">
                 Dr. García de Mendoza al piano.
               </figcaption>
             </figure>
-            <figure class="slider-figure" style="width: var(--w-s-pers);">
+            <figure class="slider-figure" style="width: var(--w-s-pers)">
               <img src="/assets/Galería/Personal/gal-pers-9.jpg" />
               <figcaption class="caption">
                 Dr. García de Mendoza en Venecia, Italia.
               </figcaption>
             </figure>
-            <figure class="slider-figure" style="width: var(--w-s-pers);">
+            <figure class="slider-figure" style="width: var(--w-s-pers)">
               <img src="/assets/Galería/Personal/gal-pers-10.jpg" />
               <figcaption class="caption">
                 Biblioteca del Dr. García de Mendoza.
               </figcaption>
             </figure>
-            <figure class="slider-figure" style="width: var(--w-s-pers);">
+            <figure class="slider-figure" style="width: var(--w-s-pers)">
               <img src="/assets/Galería/Personal/gal-pers-11.jpg" />
               <figcaption class="caption">
                 Dr. García de Mendoza con su esposa en una restaurant en México.
               </figcaption>
             </figure>
-            <figure class="slider-figure" style="width: var(--w-s-pers);">
+            <figure class="slider-figure" style="width: var(--w-s-pers)">
               <img src="/assets/Galería/Personal/gal-pers-12.jpg" />
               <figcaption class="caption">
-                Dr. García de Mendoza con su esposa en un restaurant en  Munich, Alemania.
+                Dr. García de Mendoza con su esposa en un restaurant en Munich,
+                Alemania.
               </figcaption>
             </figure>
-            <figure class="slider-figure" style="width: var(--w-s-pers);">
+            <figure class="slider-figure" style="width: var(--w-s-pers)">
               <img src="/assets/Galería/Personal/gal-pers-13.jpg" />
               <figcaption class="caption">
-                El Dr. García de Mendoza con su esposa y su hijo en un museo de Europa.
+                El Dr. García de Mendoza con su esposa y su hijo en un museo de
+                Europa.
               </figcaption>
             </figure>
-            <figure class="slider-figure" style="width: var(--w-s-pers);">
+            <figure class="slider-figure" style="width: var(--w-s-pers)">
               <img src="/assets/Galería/Personal/gal-pers-14.jpg" />
               <figcaption class="caption">
                 Dr. García de Mendoza con su esposa en un museo en Europa.
               </figcaption>
             </figure>
-            <figure class="slider-figure" style="width: var(--w-s-pers);">
+            <figure class="slider-figure" style="width: var(--w-s-pers)">
               <img src="/assets/Galería/Personal/gal-pers-15.jpg" />
               <figcaption class="caption">
                 Magdalena Boratgis, alumna de piano del Dr. García de Mendoza.
               </figcaption>
             </figure>
-            <figure class="slider-figure" style="width: var(--w-s-pers);">
+            <figure class="slider-figure" style="width: var(--w-s-pers)">
               <img src="/assets/Galería/Personal/gal-pers-16.jpg" />
               <figcaption class="caption">
-                Srita. Rosa María Grau, alumna de piano del Dr. García de Mendoza.
+                Srita. Rosa María Grau, alumna de piano del Dr. García de
+                Mendoza.
               </figcaption>
             </figure>
           </div>
@@ -193,20 +232,22 @@
         </div>
       </div>
       <div class="spacing-top-large text-center">
-        <a href="/GaleriaProfesional.html" class="link text-img">VER PROFESIONAL</a>
-     </div>
+        <a href="/GaleriaProfesional.html" class="link text-img"
+          >VER PROFESIONAL</a
+        >
+      </div>
     </main>
     <footer class="footer-page">
-        <div class="text-center">
-          <p>Copyright © 2024 Adalberto García de Medoza. All rights reserved.</p>
-          <p>
-            Design by
-            <a href="https://portafolio-cv.vercel.app/">Ivanova, Developer UI.</a>
-          </p>
-        </div>
+      <div class="text-center">
+        <p>Copyright © 2024 Adalberto García de Medoza. All rights reserved.</p>
+        <p>
+          Design by
+          <a href="https://portafolio-cv.vercel.app/">Ivanova, Developer UI.</a>
+        </p>
+      </div>
     </footer>
-    
+
     <script src="/headerPages.js"></script>
     <script src="/scriptGallery.js"></script>
-</body>
+  </body>
 </html>
