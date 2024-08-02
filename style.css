@@ -265,6 +265,21 @@ meter {
   }
 }
 
+/***Gadget Translate***/
+.goog-te-combo{
+  border-style: double;
+  font-family: var(--font-text)!important; 
+}
+
+.goog-te-gadget{
+  color: var(--color-terciary)!important;
+}
+
+.VIpgJd-ZVi9od-l4eHX-hSRGPd{
+  font-weight: 100!important;
+}
+
+
 /***Hero Section Pages*** */
 .wrapper-header {
   max-width: 1180px;
