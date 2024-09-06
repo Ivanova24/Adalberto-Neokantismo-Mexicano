@@ -232,15 +232,6 @@ meter {
       row-gap: var(--spacing-small);
     }
   }
-
-  .hero-img {
-    background-color: var(--color-primary);
-    padding: var(--spacing-medium);
-
-    img {
-      border-radius: 3rem;
-    }
-  }
 }
 
 @media screen and (min-width: 27rem) {
@@ -256,7 +247,6 @@ meter {
     .hero-img {
       display: grid;
       justify-content: center;
-      padding-top: var(--size-fluid-3);
 
       img {
         border-radius: 0;
