@@ -804,7 +804,6 @@ meter {
   );
   background: radial-gradient(0.2em 50% at left, #000a, #0000) border-box,
     hsl(from var(--color-primary) h s l / 0.5) padding-box;
-  font-size: var(--font-size-small);
   width: fit-content;
   margin-top: 1rem;
 }
