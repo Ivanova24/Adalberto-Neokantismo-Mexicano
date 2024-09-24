@@ -727,7 +727,7 @@ meter {
 @media screen and (width >= 30rem) {
   :is(.card-docu) figcaption {
     display: grid;
-    grid-template-rows: max-content 16rem 1fr;
+    grid-template-rows: max-content 17rem 1fr;
   }
 }
 
