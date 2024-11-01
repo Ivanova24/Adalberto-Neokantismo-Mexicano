@@ -8,10 +8,11 @@
   --color-text: #425466;
   --color-white: #f0f2f4;
   --color-shadow: rgba(0, 0, 0, 0.2);
+  --color-body: rgb(236 238 238 / 1);
   --size-fluid-1: clamp(2rem, 4vw, 3.5rem);
   --size-fluid-2: clamp(2rem, 5vw, 6rem);
   --size-fluid-3: clamp(4.25rem, 11vw, 9.25rem);
-  --font-title: "Yantramanav";
+  --font-title: "BaseNeue";
   --font-subTitle: "Sintony";
   --font-text: "Poppins", "Bahnschrift", "DIN Alternate",
     "Franklin Gothic Medium", "Nimbus Sans Narrow", "sans-serif-condensed",
@@ -37,6 +38,14 @@
 }
 
 /* *****Fonts*****  */
+@font-face {
+  font-display: swap;
+  font-family: "BaseNeue";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/Fonts/BaseNeue.woff2") format("woff2");
+}
+
 @font-face {
   font-display: swap;
   font-family: "Yantramanav";
@@ -126,6 +135,7 @@ html {
 body {
   line-height: 1.5;
   min-height: 100vh;
+  background-color: var(--color-body);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeSpeed;
 }
